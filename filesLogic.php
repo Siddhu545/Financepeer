@@ -22,8 +22,8 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
     $file = $_FILES['myfile']['tmp_name'];
     $size = $_FILES['myfile']['size'];
 
-    if (!in_array($extension, ['zip', 'pdf', 'docx'])) {
-        echo "You file extension must be .zip, .pdf or .docx";
+    if (!in_array($extension, ['json'])) {
+        echo "You file extension must be .json";
     } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 1Megabyte
         echo "File too large!";
     } else {
